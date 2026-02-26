@@ -62,9 +62,9 @@ https://nepali-english-date-converter-ktrytizi8.vercel.app/
 
 ## 📊 GitHub Stats
 
-![Dinesh's GitHub stats](https://github-readme-stats.vercel.app/api?username=DineshBahadurShahi&show_icons=true&theme=tokyonight)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=DineshBahadurShahi&show_icons=true&theme=tokyonight&hide_border=true&count_private=true)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=DineshBahadurShahi&layout=compact&theme=tokyonight)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=DineshBahadurShahi&layout=compact&theme=tokyonight&hide_border=true)
 
 ---
 
