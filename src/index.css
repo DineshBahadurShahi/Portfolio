@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --color-dark-main: #020617;
+  --color-dark-secondary: #0f172a;
+  --color-dark-morphism: rgba(2, 6, 23, 0.7);
+  --color-dark-glass: rgba(15, 23, 42, 0.4);
+  --color-primary-glow: rgba(99, 102, 241, 0.3);
+
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Space Grotesk', system-ui, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-[#020617] text-[#94a3b8] font-sans antialiased selection:bg-[#6366f1]/30 overflow-x-hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading text-white;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[#020617];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#6366f1]/50 rounded-full hover:bg-[#6366f1]/80 transition-colors;
+}
+
+/* Base Glassmorphism utility */
+.glass {
+  @apply bg-[#0f172a]/60 backdrop-blur-md border border-white/5 shadow-lg;
+}
+
+/* Base interactive element styles */
+.interactive-element {
+  @apply transition-all duration-300 hover:scale-[1.02] active:scale-[0.98];
+}
