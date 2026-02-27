@@ -10,7 +10,7 @@ const projects = [
         image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=2668&auto=format&fit=crop",
         tags: ["React", "TypeScript", "Tailwind CSS", "Date Integration"],
         links: {
-            live: "https://vercel.com/dineshbahadurshahis-projects/nepali-english-date-converter",
+           live: "https://nepali-english-date-converter.vercel.app/",
             github: "https://github.com/DineshBahadurShahi/nepali-english-date-converter",
         },
     },
