@@ -15,7 +15,7 @@ const educationDetails = [
         degree: "Higher Secondary Education (Class 12)",
         major: "Science",
         institution: "Reliance International Academy",
-        grade: "GPA: 3.22/4.0 | National Examination Board (NEB)",
+        grade: "GPA: 2.89/4.0 | National Examination Board (NEB)",
         date: "2018 – 2020",
         icon: <HiAcademicCap className="text-2xl" />,
     },
@@ -47,33 +47,33 @@ const AcademicJourney = () => {
                             }`}
                     >
                         {/* Timeline Node */}
-                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-slate-900 border-2 border-indigo-500 flex items-center justify-center text-indigo-400 transform -translate-x-1/2 shadow-lg z-10 hidden md:flex">
+                        <div className="absolute left-8 md:left-1/2 w-12 h-12 rounded-full bg-white dark:bg-slate-900 border-2 border-indigo-500 flex items-center justify-center text-indigo-600 dark:text-indigo-400 transform -translate-x-1/2 shadow-md dark:shadow-lg z-10 hidden md:flex transition-colors duration-300">
                             {edu.icon}
                         </div>
 
                         {/* Mobile Node */}
-                        <div className="absolute left-8 w-10 h-10 rounded-full bg-slate-900 border-2 border-indigo-500 flex md:hidden items-center justify-center text-indigo-400 transform -translate-x-1/2 shadow-lg z-10">
-                            <span className="text-xs">{(index + 1).toString().padStart(2, '0')}</span>
+                        <div className="absolute left-8 w-10 h-10 rounded-full bg-white dark:bg-slate-900 border-2 border-indigo-500 flex md:hidden items-center justify-center text-indigo-600 dark:text-indigo-400 transform -translate-x-1/2 shadow-md dark:shadow-lg z-10 transition-colors duration-300">
+                            <span className="text-xs font-semibold">{(index + 1).toString().padStart(2, '0')}</span>
                         </div>
 
                         {/* Content Card */}
                         <div className={`w-full pl-20 md:pl-0 md:w-1/2 ${index % 2 === 0 ? "md:pl-16 text-left" : "md:pr-16 md:text-right"}`}>
-                            <div className="glass p-8 rounded-2xl relative group overflow-hidden border-slate-700/50 hover:border-indigo-500/50 transition-colors shadow-md hover:shadow-lg">
+                            <div className="bg-white dark:bg-slate-800/40 backdrop-blur-md p-8 rounded-2xl relative group overflow-hidden border border-slate-200 dark:border-slate-700/50 hover:border-indigo-400 dark:hover:border-indigo-500/50 transition-colors duration-300 shadow-sm hover:shadow-md dark:shadow-md dark:hover:shadow-lg">
 
-                                <h3 className="text-2xl font-bold text-white mb-2">{edu.degree}</h3>
-                                <h4 className="text-lg text-indigo-400 font-medium mb-4">{edu.major}</h4>
+                                <h3 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white mb-2 transition-colors duration-300">{edu.degree}</h3>
+                                <h4 className="text-lg text-indigo-600 dark:text-indigo-400 font-semibold tracking-tight mb-4 transition-colors duration-300">{edu.major}</h4>
 
-                                <div className={`flex flex-col gap-2 text-slate-300 ${index % 2 === 0 ? "items-start" : "md:items-end items-start"}`}>
+                                <div className={`flex flex-col gap-2 text-slate-600 dark:text-slate-300 transition-colors duration-300 ${index % 2 === 0 ? "items-start" : "md:items-end items-start"}`}>
                                     <div className="flex items-center gap-2">
-                                        <HiOutlineLocationMarker className="text-indigo-400 shrink-0" />
+                                        <HiOutlineLocationMarker className="text-indigo-500 dark:text-indigo-400 shrink-0 transition-colors duration-300" />
                                         <span>{edu.institution}</span>
                                     </div>
                                     <div className="flex items-center gap-2">
-                                        <HiAcademicCap className="text-indigo-400 shrink-0" />
-                                        <span className="font-semibold text-white/90">{edu.grade}</span>
+                                        <HiAcademicCap className="text-indigo-500 dark:text-indigo-400 shrink-0 transition-colors duration-300" />
+                                        <span className="font-semibold text-slate-800 dark:text-white/90 transition-colors duration-300">{edu.grade}</span>
                                     </div>
-                                    <div className="flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-slate-800/50 border border-slate-700 w-fit text-sm">
-                                        <HiOutlineCalendar className="text-indigo-400" />
+                                    <div className="flex items-center gap-2 mt-2 px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-800/50 border border-slate-200 dark:border-slate-700 w-fit text-base transition-colors duration-300">
+                                        <HiOutlineCalendar className="text-indigo-500 dark:text-indigo-400 transition-colors duration-300" />
                                         <span>{edu.date}</span>
                                     </div>
                                 </div>

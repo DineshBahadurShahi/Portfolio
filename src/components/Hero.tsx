@@ -34,17 +34,17 @@ const Hero = () => {
                         Available for opportunities
                     </motion.div>
 
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-6">
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6">
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 drop-shadow-sm leading-tight">
                             Dinesh Bahadur Shahi
                         </span>
                     </h1>
 
-                    <div className="mb-8 h-12 flex justify-center lg:justify-start text-xl md:text-3xl text-slate-300 font-medium">
+                    <div className="mb-10 h-10 flex justify-center lg:justify-start text-xl md:text-3xl text-slate-300 font-medium">
                         <TypingAnimation />
                     </div>
 
-                    <p className="text-lg text-slate-400 max-w-xl mb-10 leading-relaxed">
+                    <p className="font-sans text-justify text-lg text-slate-300 max-w-2xl mb-12 leading-8 tracking-normal">
                         I enjoy building reliable and scalable web applications, focusing on clean design, performance, and practical software solutions.
                     </p>
 
@@ -63,7 +63,7 @@ const Hero = () => {
                             <a
                                 href="https://github.com/DineshBahadurShahi"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="w-14 h-14 rounded-xl border border-slate-700 bg-slate-800/80 backdrop-blur-md flex items-center justify-center text-slate-300 hover:text-white hover:border-indigo-500 hover:bg-slate-700 transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] shadow-lg hover:shadow-[0_0_15px_rgba(99,102,241,0.2)]"
                             >
                                 <SiGithub className="text-2xl" />
@@ -71,7 +71,7 @@ const Hero = () => {
                             <a
                                 href="https://www.linkedin.com/in/dinesh-bahadur-shahi-24749628a/"
                                 target="_blank"
-                                rel="noreferrer"
+                                rel="noopener noreferrer"
                                 className="w-14 h-14 rounded-xl border border-slate-700 bg-slate-800/80 backdrop-blur-md flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500 hover:bg-slate-700 transition-all duration-300 hover:scale-[1.05] active:scale-[0.98] shadow-lg hover:shadow-[0_0_15px_rgba(6,182,212,0.2)]"
                             >
                                 <SiLinkedin className="text-2xl" />

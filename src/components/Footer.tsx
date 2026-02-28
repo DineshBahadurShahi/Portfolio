@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 const Footer = () => {
     return (
-        <footer className="w-full border-t border-slate-800/50 bg-slate-950/80  relative z-10">
+        <footer className="w-full border-t border-slate-200 dark:border-slate-800/50 bg-white dark:bg-slate-950/80 relative z-10 transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
                 <div className="flex flex-col items-center md:items-start">
-                    <a href="#home" className="text-xl font-bold tracking-tighter text-white mb-2">
+                    <a href="#home" className="text-xl font-bold tracking-tighter text-slate-900 dark:text-white mb-2 transition-colors duration-300">
                         Dinesh Bahadur Shahi
                     </a>
-                    <p className="text-slate-500 text-sm">
+                    <p className="text-slate-600 dark:text-slate-500 text-sm transition-colors duration-300">
                         Computer Engineer focused on building modern and reliable software.
                     </p>
                 </div>
@@ -20,10 +20,10 @@ const Footer = () => {
                     viewport={{ once: true }}
                     className="flex items-center gap-6"
                 >
-                    <a href="#" className="text-slate-400 hover:text-white transition-colors hover:scale-110 active:scale-95 text-xl">
+                    <a href="https://github.com/DineshBahadurShahi" className="text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-white transition-colors hover:scale-110 active:scale-95 text-xl">
                         <SiGithub />
                     </a>
-                    <a href="#" className="text-slate-400 hover:text-indigo-400 transition-colors hover:scale-110 active:scale-95 text-xl">
+                    <a href="https://www.linkedin.com/in/dinesh-bahadur-shahi-24749628a/" className="text-slate-500 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-indigo-400 transition-colors hover:scale-110 active:scale-95 text-xl">
                         <SiLinkedin />
                     </a>
                 </motion.div>

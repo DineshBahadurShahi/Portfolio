@@ -27,7 +27,7 @@ const highlights = [
 
 const About = () => {
     return (
-        <SectionWrapper id="about" className="bg-slate-900/50">
+        <SectionWrapper id="about" className="bg-slate-50 dark:bg-slate-900/50 transition-colors duration-300">
             <div className="flex flex-col md:flex-row gap-16 items-center">
                 {/* Profile / Visual Side */}
                 <motion.div
@@ -37,9 +37,9 @@ const About = () => {
                     transition={{ duration: 0.8 }}
                     className="w-full md:w-1/3 relative"
                 >
-                    <div className="aspect-[4/5] rounded-2xl overflow-hidden glass relative group flex items-center justify-center p-2 bg-slate-800/20 shadow-lg">
+                    <div className="aspect-[4/5] rounded-2xl overflow-hidden glass relative group flex items-center justify-center p-2 bg-slate-100 dark:bg-slate-800/20 shadow-sm dark:shadow-lg transition-colors duration-300">
                         {/* Image Container */}
-                        <div className="w-full h-full rounded-xl overflow-hidden relative border border-slate-700/50 group-hover:border-indigo-500/30 transition-colors duration-400">
+                        <div className="w-full h-full rounded-xl overflow-hidden relative border border-slate-200 dark:border-slate-700/50 group-hover:border-indigo-400 dark:group-hover:border-indigo-500/30 transition-colors duration-400">
                             <img
                                 src="/profile.png"
                                 alt="Dinesh Bahadur Shahi"
@@ -58,7 +58,7 @@ const About = () => {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl md:text-5xl font-bold mb-6"
+                        className="text-3xl md:text-5xl font-bold tracking-tight mb-6"
                     >
                         Engineering the <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">Future</span>.
                     </motion.h2>
@@ -68,7 +68,7 @@ const About = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2 }}
-                        className="text-lg text-slate-400 leading-relaxed mb-10"
+                        className="font-sans text-lg text-slate-600 dark:text-slate-300 leading-8 tracking-wide max-w-3xl mt-4 mb-10 transition-colors duration-300"
                     >
                         I am a Computer Engineering graduate with a strong interest in understanding how systems work and how to improve them. My experience includes full-stack web development and cybersecurity research, where I have built secure and scalable applications. I focus on writing clean, reliable code and applying practical knowledge to develop efficient software solutions.
                     </motion.p>
@@ -82,13 +82,13 @@ const About = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.3 + index * 0.1 }}
-                                className="glass p-6 rounded-xl hover:-translate-y-2 transition-transform duration-300 group"
+                                className="p-6 rounded-xl border border-slate-200 dark:border-white/5 bg-white dark:bg-[#0f172a]/60 shadow-sm dark:shadow-lg hover:-translate-y-2 transition-all duration-300 group"
                             >
-                                <div className="mb-4 bg-slate-800/50 w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <div className="mb-4 bg-slate-100 dark:bg-slate-800/50 w-14 h-14 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                                     {item.icon}
                                 </div>
-                                <h3 className="text-xl font-semibold mb-2 text-slate-200">{item.title}</h3>
-                                <p className="text-sm text-slate-400">{item.desc}</p>
+                                <h3 className="text-xl font-semibold mb-2 text-slate-800 dark:text-slate-200 transition-colors duration-300">{item.title}</h3>
+                                <p className="text-sm text-slate-600 dark:text-slate-400 transition-colors duration-300">{item.desc}</p>
                             </motion.div>
                         ))}
                     </div>

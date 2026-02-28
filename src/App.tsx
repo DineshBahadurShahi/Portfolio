@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="bg-[#0B0F19] min-h-screen text-[#A1A1AA] font-sans selection:bg-indigo-500/30 overflow-x-hidden">
+    <div className="bg-slate-50 text-slate-700 dark:bg-[#0B0F19] dark:text-[#A1A1AA] font-sans dark:selection:bg-indigo-500/30 selection:bg-indigo-100 selection:text-indigo-900 overflow-x-hidden transition-colors duration-300">
       <Navbar />
 
       <main>

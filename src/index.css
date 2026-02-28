@@ -11,16 +11,14 @@
   --font-heading: 'Space Grotesk', system-ui, sans-serif;
 }
 
-:root {
-  color-scheme: dark;
-}
+@custom-variant dark (&:is(.dark *));
 
 html {
   scroll-behavior: smooth;
 }
 
 body {
-  @apply bg-[#020617] text-[#94a3b8] font-sans antialiased selection:bg-[#6366f1]/30 overflow-x-hidden;
+  @apply bg-slate-50 text-slate-700 dark:bg-[#020617] dark:text-[#94a3b8] font-sans antialiased dark:selection:bg-[#6366f1]/30 selection:bg-indigo-100 selection:text-indigo-900 overflow-x-hidden transition-colors duration-300;
 }
 
 h1,
@@ -29,7 +27,7 @@ h3,
 h4,
 h5,
 h6 {
-  @apply font-heading text-white;
+  @apply font-heading text-slate-900 dark:text-white transition-colors duration-300;
 }
 
 /* Custom Scrollbar */
@@ -38,16 +36,16 @@ h6 {
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-[#020617];
+  @apply bg-slate-100 dark:bg-[#020617];
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-[#6366f1]/50 rounded-full hover:bg-[#6366f1]/80 transition-colors;
+  @apply bg-indigo-300 dark:bg-[#6366f1]/50 rounded-full hover:bg-indigo-400 dark:hover:bg-[#6366f1]/80 transition-colors;
 }
 
 /* Base Glassmorphism utility */
 .glass {
-  @apply bg-[#0f172a]/60 backdrop-blur-md border border-white/5 shadow-lg;
+  @apply bg-white/70 dark:bg-[#0f172a]/60 backdrop-blur-md border border-slate-200 dark:border-white/5 shadow-sm dark:shadow-lg transition-colors duration-300;
 }
 
 /* Base interactive element styles */
