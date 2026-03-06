@@ -69,7 +69,7 @@ const itemVariants: Variants = {
 
 const Projects = () => {
     return (
-        <SectionWrapper id="projects" title="Featured Projects" subtitle="A selection of my recent engineering work">
+        <SectionWrapper id="projects" title="Featured Projects" subtitle="A selection of my recent engineering work" className="bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800">
             <motion.div
                 variants={containerVariants}
                 initial="hidden"

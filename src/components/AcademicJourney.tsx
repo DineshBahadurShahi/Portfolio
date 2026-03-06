@@ -31,7 +31,7 @@ const educationDetails = [
 
 const AcademicJourney = () => {
     return (
-        <SectionWrapper id="journey" title="Academic Journey" subtitle="My Educational Background">
+        <SectionWrapper id="journey" title="Academic Journey" subtitle="My Educational Background" className="bg-white dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-800">
             <div className="max-w-4xl mx-auto relative pt-10">
                 {/* Timeline Line */}
                 <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-[2px] bg-gradient-to-b from-indigo-500 via-purple-500 to-transparent transform md:-translate-x-1/2" />

@@ -36,11 +36,11 @@ const SectionWrapper = ({ children, id, className, fullHeight = false, title, su
                         >
                             {title.split(' ').map((word, i, arr) => (
                                 i === arr.length - 1 ? (
-                                    <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-cyan-400 drop-shadow-sm ml-2">
+                                    <span key={i} className="text-slate-800 dark:bg-gradient-to-r dark:from-indigo-400 dark:to-cyan-400 dark:bg-clip-text dark:text-transparent drop-shadow-sm ml-2">
                                         {word}
                                     </span>
                                 ) : (
-                                    <span key={i} className="text-white ml-2">{word}</span>
+                                    <span key={i} className="text-slate-800 dark:text-white ml-2">{word}</span>
                                 )
                             ))}
                         </motion.h2>
@@ -51,7 +51,7 @@ const SectionWrapper = ({ children, id, className, fullHeight = false, title, su
                             whileInView={{ opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.2 }}
-                            className="text-slate-400 max-w-2xl mx-auto text-lg"
+                            className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg"
                         >
                             {subtitle}
                         </motion.p>

@@ -70,7 +70,12 @@ const Navbar = () => {
                             <a
                                 key={link.name}
                                 href={link.href}
-                                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors relative group"
+                                className={cn(
+                                    "text-sm font-medium transition-colors relative group",
+                                    scrolled
+                                        ? "text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400"
+                                        : "text-slate-300 hover:text-white"
+                                )}
                             >
                                 {link.name}
                                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-indigo-500 to-cyan-400 transition-all duration-300 group-hover:w-full"></span>
@@ -82,7 +87,12 @@ const Navbar = () => {
                     <div className="flex items-center gap-4 pl-6 border-l border-slate-300 dark:border-slate-700/50 transition-colors duration-300">
                         <button
                             onClick={toggleTheme}
-                            className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all focus:outline-none"
+                            className={cn(
+                                "p-2 rounded-lg transition-all focus:outline-none",
+                                scrolled
+                                    ? "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                    : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                            )}
                             aria-label="Toggle Dark Mode"
                         >
                             {theme === "dark" ? (
@@ -92,26 +102,46 @@ const Navbar = () => {
                             )}
                         </button>
 
-                        <a href="https://github.com/DineshBahadurShahi" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all hover:scale-110">
+                        <a href="https://github.com/DineshBahadurShahi" target="_blank" rel="noopener noreferrer" className={cn(
+                            "transition-all hover:scale-110",
+                            scrolled
+                                ? "text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400"
+                                : "text-slate-300 hover:text-white"
+                        )}>
                             <SiGithub className="text-xl" />
                         </a>
-                        <a href="https://www.linkedin.com/in/dinesh-bahadur-shahi-24749628a/" target="_blank" rel="noopener noreferrer" className="text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400 transition-all hover:scale-110">
+                        <a href="https://www.linkedin.com/in/dinesh-bahadur-shahi-24749628a/" target="_blank" rel="noopener noreferrer" className={cn(
+                            "transition-all hover:scale-110",
+                            scrolled
+                                ? "text-slate-600 dark:text-slate-400 hover:text-cyan-600 dark:hover:text-cyan-400"
+                                : "text-slate-300 hover:text-white"
+                        )}>
                             <SiLinkedin className="text-xl" />
                         </a>
                     </div>
                 </nav>
 
                 {/* Mobile Icons */}
-                <div className="lg:hidden flex items-center gap-4 text-slate-600 dark:text-slate-400 transition-colors">
+                <div className="lg:hidden flex items-center gap-4 transition-colors">
                     <button
                         onClick={toggleTheme}
-                        className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-all focus:outline-none"
+                        className={cn(
+                            "p-2 rounded-lg transition-all focus:outline-none",
+                            scrolled
+                                ? "text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800"
+                                : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                        )}
                         aria-label="Toggle Dark Mode"
                     >
                         {theme === "dark" ? <HiSun className="text-2xl" /> : <HiMoon className="text-2xl" />}
                     </button>
                     <button
-                        className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 hover:text-slate-900 dark:hover:text-white transition-colors"
+                        className={cn(
+                            "p-2 rounded-lg transition-colors",
+                            scrolled
+                                ? "hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white"
+                                : "text-slate-300 hover:text-white hover:bg-slate-800/50"
+                        )}
                         onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                     >
                         {mobileMenuOpen ? <HiX className="text-2xl" /> : <HiMenuAlt3 className="text-2xl" />}
@@ -133,7 +163,7 @@ const Navbar = () => {
                                 key={link.name}
                                 href={link.href}
                                 onClick={() => setMobileMenuOpen(false)}
-                                className="text-lg font-medium text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
+                                className="text-lg font-medium text-slate-700 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                             >
                                 {link.name}
                             </a>
